@@ -1,0 +1,91 @@
+body {
+    margin: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+    grid: 
+        "a b g"
+        "a c h"
+        "a d i"
+        "a e j"
+        "a f k"
+        
+}
+#checkbox {
+    grid-area: check;
+}
+
+#box0{
+    grid-area: a;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    
+}
+#box1{
+    grid-area: b;
+    
+}
+#box2{
+    grid-area: c;
+    
+}
+#box3{
+    grid-area: d;
+    
+}
+#box4{
+    grid-area: e;
+    
+}
+#box5{
+    grid-area: f;
+    
+}
+#box6{
+    grid-area: g;
+    
+}
+#box7{
+    grid-area: h;
+    
+}
+#box8{
+    grid-area: i;
+    
+}
+#box9{
+    grid-area: j;
+    
+}
+#box10{
+    grid-area: k;
+    
+}
+
+
+.box {
+    background-color: #7a7b7c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    height: 100px;
+    width: auto;
+
+}
+
+
+.task {
+    background-color: #f97f12;
+    color: black;
+    padding: 5px;
+    margin: 4px;
+
+}

@@ -1,0 +1,81 @@
+<html lang="da">
+    <head>
+        <title>POBS PlanteOBServation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    </head>
+    <body>
+        <form name="observation_form" method="post" action="http://niko751i4.web.eadania.dk/booking2/">
+            <fieldset>
+                <label style="color: black">Måned</label><br> 
+                <select id="Month" name="Month" style="background-color: white; color: black">
+                    <option value="Januar">Januar</option>
+                    <option value="Febuar">Febuar</option>
+                    <option value="Marts">Marts</option>
+                    <option value="April">April</option>
+                    <option value="Maj">Maj</option>
+                    <option value="Juni">Juni</option>
+                    <option value="Juli">Juli</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="Oktober">Oktober</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <br>
+                <label style="color: black">Dag</label><br>
+                <select id="Day" name="Day" style="background-color: white; color: black">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select><br>
+                
+                <lable style="color: black">Antal Deltager(min 5 personer):</lable><br>
+                <input type="number" name="Event_Amount" value="5" style="background-color: white; color: black;"><br>
+                <br>
+                
+                <lable style="color: black">Mad Og Drikke</lable><br>
+                
+                <input type="checkbox" name="Slider_Buffet" value="Burger"><label style="color: black">All You Can Eat Cheese Burger 100,- pr.person</label><br>
+                
+                <input type="checkbox" name="All_You_Can_Eat" value="All_You_Can_Eat"><label style="color: black">Aften Buffet 100,- pr.person</label><br>
+                
+                <input type="checkbox" name="Fri_Bar" value="Fri_Bar"><label style="color: black">Fri Bar 200,- pr.person<div id="friCost"></div> </label><br>
+                
+                <input type="checkbox" name="All_Inclusive" value="All_Inclusive"><label style="color: black">All Inclusiv 250,- pr.person<div id="allCost"></div></label>
+                <br>
+                
+                <button type="submit" value="Submit" style="background-color: #26c632; color: white">Book Nu</button>
+            
+            </fieldset>
+        </form>
+        
+    </body>

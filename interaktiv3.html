@@ -1,0 +1,31 @@
+<html lang="da">
+    <head>
+        <title>POBS PlanteOBServation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    </head>
+    <body>
+        <form name="observation_form" method="post" action="behandl.php">
+            <fieldset>
+                <label>Navn:</label> 
+                <input type="text" name="Event_Name">
+                <br>
+                <label>Tlf:</label> 
+                <input type="text" name="Event_Phone">
+                <br>
+                <label>By:</label> 
+                <input type="text" name="Event_City">
+                <br>
+                <label>Postnummer:</label> 
+                <input type="text" name="Event_Post">
+                <br>
+                <label>Email:</label> 
+                <input type="text" name="Event_Email">
+                <br>
+                <label>Kommentar(max:150 Tegn):</label><br>
+                <textarea id="Event_Comment" name="Event_Comment"></textarea><br>
+                <button type="submit" value="Submit">Book Nu</button>
+            </fieldset>
+        </form>
+        
+    </body>

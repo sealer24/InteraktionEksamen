@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            color: #444;
+            grid: 
+                "a b"
+                "a c"
+                "a d"
+                "a e"
+                "a f"
+                "a g"
+                "a h"
+                "a i"
+                "a j"
+                    "a k"
+        }
+        @media screen and (min-width: 800px){
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 10px;
+                color: #444;
+                grid: 
+                    "a b c"
+                    "a d e"
+                    "a f g"
+                    "a h i"
+                    "a j k"
+        
+            }
+         }
+#checkbox {
+    grid-area: check;
+}
+
+#box0{
+    grid-area: a;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    
+}
+#box1{
+    grid-area: b;
+    
+}
+#box2{
+    grid-area: c;
+    
+}
+#box3{
+    grid-area: d;
+    
+}
+#box4{
+    grid-area: e;
+    
+}
+#box5{
+    grid-area: f;
+    
+}
+#box6{
+    grid-area: g;
+    
+}
+#box7{
+    grid-area: h;
+    
+}
+#box8{
+    grid-area: i;
+    
+}
+#box9{
+    grid-area: j;
+    
+}
+#box10{
+    grid-area: k;
+    
+}
+
+
+.box {
+    background-color: #7a7b7c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    text-align: center;
+
+
+}
+
+
+.task {
+    background-color: #f97f12;
+    color: black;
+    padding: 5px;
+    margin: 4px;
+
+}</style>
+</head>
+<body>
+    <p>træk den ønskede aktivitet over i det ønskede tidsrum</p>
+    <div class="wrapper">
+        
+        <div id="box0" class="box">
+        
+            <div id="task1" class="task goKart" draggable="true">
+                Gokart<br>
+            </div>
+            
+            <div id="task2" class="task flyBall" draggable="true">
+                Flyball<br>   
+            </div>
+            
+            <div id="task3" class="task rug" draggable="true">
+                Kørestol Rugby<br>
+            </div>
+            
+            <div id="task4" class="task bowTag" draggable="true">
+                Bowtag<br>
+            </div>
+            
+            <div id="task5" class="task funBall" draggable="true">
+                Funball<br>
+            </div>
+            
+            <div id="task6" class="task fri" draggable="true">
+                Fri-leg<br>
+            </div>
+            
+        </div>
+    
+        <div id="box1" class="box">
+            <label>13:00-13:30</label>
+        </div>
+        <div id="box2" class="box">
+            <label>13:30-14:00</label>
+        </div>
+        <div id="box3" class="box">
+            <label>14:00-14:30</label>
+        </div>
+        <div id="box4" class="box">
+            <label>14:30-15:00</label>
+        </div>
+        <div id="box5" class="box">
+            <label>15:00-15:30</label>
+        </div>
+        <div id="box6" class="box">
+            <label>15:30-16:00</label>
+        </div>
+        <div id="box7" class="box">
+            <label>16:00-16:30</label>
+        </div>
+        <div id="box8" class="box">
+            <label>16:30-17:00</label>
+        </div>
+        <div id="box9" class="box">
+            <label>17:00-17:30</label>
+        </div>
+        <div id="box10" class="box">
+            <label>17:30-18:00</label>
+        </div>
+        
+    </div>
+    <script>
+var dropTarget = document.querySelector(".wrapper");
+var draggables = document.querySelectorAll(".task");
+
+for(let i = 0; i < draggables.length; i++) {
+  draggables[i].addEventListener("dragstart", function (ev) {
+     ev.dataTransfer.setData("srcId", ev.target.id);
+  });
+}
+
+dropTarget.addEventListener('dragover', function(ev) {
+  ev.preventDefault();
+});
+
+dropTarget.addEventListener('drop', function(ev) {
+  ev.preventDefault();
+  let target = ev.target;
+  let droppable  = target.classList.contains('box');
+  let srcId = ev.dataTransfer.getData("srcId");
+ 
+  if (droppable) {
+    ev.target.appendChild(document.getElementById(srcId).cloneNode(true));
+  }
+}); </script>
+</body>
+</html>
